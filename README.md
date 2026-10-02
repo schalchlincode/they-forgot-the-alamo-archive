@@ -4,7 +4,11 @@ The public-facing archive is a static Astro site. Entries and evidence reference
 
 ## Local build
 
-From `site/`, run `npm install`, then `npm run build` or `npm run dev`. The game itself remains separate in the parent directory and uses its existing local launcher.
+From `site/`, run `npm install`, then `npm run build` or `npm run dev`. The game's editable source stays in the parent directory; its self-contained web copy and required assets are published from `public/game/`.
+
+## Playable web build
+
+The archive's Play page links to `/game/`. When updating the game, copy `index.html`, `main.js`, `ps1-settings.js`, the required `assets/models/`, `audio/`, and `vendor/` files into `public/game/`. Keep the Three.js license notice with the vendored modules. Build with the repository path set (the Pages workflow does this automatically), and test the standalone game in a real browser before publishing.
 
 ## Adding a meaningful change
 
@@ -14,7 +18,7 @@ From `site/`, run `npm install`, then `npm run build` or `npm run dev`. The game
 4. Add selected media to `scripts/prepare_media.py`, run it, inspect the output, and build the site. A new capture needs a new filename; never overwrite archival originals.
 5. Audit the exact staged files for secrets and unrelated personal material before any public push. Build and browser-test desktop and mobile pages.
 
-The archive is prepared for a dedicated GitHub repository using the existing owner's account. Publish only the audited `site/` source as the repository root; do not push the private MechaJeeves parent repository or its Git history. The included `.github/workflows/pages.yml` builds and deploys the static site from `main`. In GitHub repository Settings → Pages, select **GitHub Actions** as the build source. The build reads `GITHUB_REPOSITORY` and prefixes links and assets for project Pages at `https://OWNER.github.io/REPOSITORY/`. Local builds use root paths. Public deployment has not yet been configured or verified.
+The dedicated GitHub repository contains only this audited site; it does not include the private MechaJeeves parent repository or its Git history. The included `.github/workflows/pages.yml` builds and deploys the static site from `main`. In GitHub repository Settings → Pages, select **GitHub Actions** as the build source. The build reads `GITHUB_REPOSITORY` and prefixes links and assets for project Pages at `https://OWNER.github.io/REPOSITORY/`. Local builds use root paths. The archive is published through GitHub Pages, and the standalone game lives at `/game/` beneath the repository path.
 
 Before publication, review the exact site-only files, images, journal copy, third-party license notices, Git author identity, and repository visibility. The browser evidence and `dist/` are local test output and should not be included in the public source repository.
 

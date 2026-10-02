@@ -28,7 +28,9 @@ def main():
     worker = threading.Thread(target=server.serve_forever, daemon=True)
     worker.start()
     origin = f'http://127.0.0.1:{server.server_port}'
-    routes = sorted('/' + p.parent.relative_to(dist).as_posix().strip('.') + '/' for p in dist.rglob('index.html'))
+    # The standalone game is also an index.html, but it has no archive-page h1
+    # contract or image gallery. Its WebGL runtime is exercised separately.
+    routes = sorted('/' + p.parent.relative_to(dist).as_posix().strip('.') + '/' for p in dist.rglob('index.html') if p.parent != dist / 'game')
     routes = sorted(set('/' if r == '//' else r for r in routes))
     media = json.loads((dist / 'media' / 'metadata.json').read_text(encoding='utf-8'))
     results = []

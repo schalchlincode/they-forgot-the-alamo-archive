@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>They Forgot the Alamo — prototype</title>
+  <style>
+    *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#11100f;color:#f6e9c7;font-family:monospace}
+    #game{position:absolute;width:100%;height:100%;image-rendering:pixelated;cursor:none}
+    #hud{position:absolute;top:18px;left:20px;pointer-events:none;text-shadow:2px 2px #17120d;font-size:16px;line-height:1.5}
+    #title{color:#ffd37d;font-size:22px;letter-spacing:2px;font-weight:bold}
+    #ammo{margin-top:9px;color:#fff4ce;font-size:20px}
+    #state{color:#e9c992}#hint{position:absolute;bottom:18px;left:20px;right:20px;pointer-events:none;text-shadow:2px 2px #17120d;font-size:14px}
+    #crosshair{position:absolute;left:50%;top:50%;width:18px;height:18px;transform:translate(-50%,-50%);pointer-events:none}
+    #crosshair:before,#crosshair:after{content:'';position:absolute;background:#f3e2b4;box-shadow:1px 1px #241c12}
+    #crosshair:before{left:8px;top:0;width:2px;height:18px}#crosshair:after{top:8px;left:0;height:2px;width:18px}
+    #error{position:absolute;inset:0;display:none;place-items:center;background:#17100d;color:#fff;text-align:center;padding:30px}
+    #touchToggle{position:absolute;top:12px;right:12px;z-index:5;padding:10px 12px;border:1px solid #d8bd86;border-radius:8px;background:#342b2a;color:#fff4ce;font: bold 14px monospace;touch-action:manipulation}
+    #resolutionToggle{position:absolute;top:58px;right:12px;z-index:5;padding:8px 10px;border:1px solid #d8bd86;border-radius:8px;background:#342b2a;color:#fff4ce;font: bold 13px monospace;touch-action:manipulation}
+    #vertexToggle{position:absolute;top:96px;right:12px;z-index:5;padding:8px 10px;border:1px solid #d8bd86;border-radius:8px;background:#342b2a;color:#fff4ce;font: bold 13px monospace;touch-action:manipulation}
+    #ditherToggle{position:absolute;top:134px;right:12px;z-index:5;padding:8px 10px;border:1px solid #d8bd86;border-radius:8px;background:#342b2a;color:#fff4ce;font: bold 13px monospace;touch-action:manipulation}
+    #fogToggle{position:absolute;top:172px;right:12px;z-index:5;padding:8px 10px;border:1px solid #d8bd86;border-radius:8px;background:#342b2a;color:#fff4ce;font: bold 13px monospace;touch-action:manipulation}
+    #touchControls{display:none;position:absolute;inset:0;z-index:4;pointer-events:none;touch-action:none;user-select:none;-webkit-user-select:none}
+    #touchControls.on{display:block}
+    .touchBtn{pointer-events:auto;touch-action:none;border:2px solid #e4d2aa;border-radius:16px;background:#332a2aBB;color:#fff4ce;font:bold 14px monospace;min-width:64px;min-height:58px;padding:10px;text-shadow:1px 1px #17120d}
+    #movePad{position:absolute;left:22px;bottom:28px;width:142px;height:142px;border:2px solid #e4d2aa88;border-radius:50%;background:#332a2a66;pointer-events:auto;touch-action:none}
+    #moveNub{position:absolute;left:50%;top:50%;width:54px;height:54px;margin:-27px;border-radius:50%;background:#e4d2aa99;border:2px solid #fff4ce}
+    #lookPad{position:absolute;left:34%;right:0;top:12%;bottom:24%;pointer-events:auto;touch-action:none}
+    #actionPad{position:absolute;right:16px;bottom:22px;display:grid;grid-template-columns:repeat(2,72px);gap:8px;pointer-events:none}
+    @media(max-width:600px){#hud{top:8px;left:10px;font-size:13px}#title{font-size:16px}#ammo{font-size:17px}#hint{display:none}#touchToggle{top:8px;right:8px;font-size:12px}}
+  </style>
+</head>
+<body>
+<canvas id="game" aria-label="Third person game view"></canvas>
+<div id="hud"><div id="title">THEY FORGOT THE ALAMO</div><div>ROOM TEST / 01</div><div id="ammo">● ●</div><div id="state">Ready</div></div>
+<div id="crosshair"></div><div id="hint">Click to lock mouse · WASD move · mouse look · left-click fire · hold right-click aim · Q raccoon view · R reload · Shift sprint · Space hop · Esc release mouse</div>
+<button id="touchToggle" type="button" aria-pressed="false">Touch controls: Off</button>
+<button id="resolutionToggle" type="button" aria-pressed="true">Pixel resolution: On</button>
+<button id="vertexToggle" type="button" aria-pressed="true">Vertex snap: On</button>
+<button id="ditherToggle" type="button" aria-pressed="true">Color dither: On</button>
+<button id="fogToggle" type="button" aria-pressed="true">Distance fog: On</button>
+<div id="touchControls" aria-label="Touch controls">
+  <div id="lookPad" aria-label="Drag to look"></div>
+  <div id="movePad" aria-label="Move"><div id="moveNub"></div></div>
+  <div id="actionPad">
+    <button class="touchBtn" id="aimBtn" type="button">Aim</button><button class="touchBtn" id="fireBtn" type="button">Fire</button>
+    <button class="touchBtn" id="reloadBtn" type="button">Reload</button><button class="touchBtn" id="modeBtn" type="button">Raccoon</button>
+  </div>
+</div>
+<div id="error" role="alert">The 3D renderer could not start. Open this folder through a local web server:<br><code>python -m http.server 8768</code></div>
+<script type="module" src="./main.js"></script>
+</body></html>
