@@ -1,8 +1,8 @@
 ---
 slug: "blender-shotgun"
 date: "2026-10-02"
-title: "I built the shotgun around a real hinge"
-summary: "I made a low-poly side-by-side shotgun in Blender, with barrels that actually swing open for the reload."
+title: "A Blender shotgun with a working hinge"
+summary: "This build adds a low-poly side-by-side shotgun whose barrels swing open during the reload."
 tags: ["Weapons", "Animation", "Models"]
 milestone: true
 image: "/media/shotgun-open.webp"
@@ -12,6 +12,6 @@ sourceType: "record"
 order: 11
 ---
 
-I rebuilt the shotgun as an original low-poly side-by-side model in Blender. The barrels are a separate piece from the receiver, which means the game can swing them open and show the chambers during the reload. The existing two-shell setup now has something physical to do while all that happens.
+This version adds an original low-poly side-by-side shotgun modeled in Blender. Its barrels are separate from the receiver, so the game can swing them open and show the chambers during the reload. The existing two-shell setup now has a visible reload to go with it.
 
-The game loads the model as a GLB, with the old procedural gun still there as a fallback in case the file doesn't load. I checked it in Edge: the model loaded, it fired, the breech opened, and the reload finished. The image is from that October 2 check, not a reconstruction of an older build.
+The game loads the model as a GLB and keeps the procedural gun as a fallback if the file fails to load. A live Edge check confirmed that the model loaded, fired, opened at the breech, and completed a reload. This image is from the October 2 check, not a reconstruction of an older build.

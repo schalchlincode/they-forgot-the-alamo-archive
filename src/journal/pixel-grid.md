@@ -1,8 +1,8 @@
 ---
 slug: "pixel-grid"
 date: "2026-09-30"
-title: "I started treating the pixels as part of the look"
-summary: "I made the render resolution an actual setting so the pixel look wasn't at the mercy of the browser window."
+title: "Render resolution becomes a setting"
+summary: "The world render resolution can be adjusted separately from the interface, which stays readable."
 tags: ["Graphics", "Experiment"]
 milestone: true
 image: "/media/pixel-grid-on.webp"
@@ -12,6 +12,6 @@ sourceType: "commit"
 order: 3
 ---
 
-I pulled the render resolution into its own setting. That let me make the 3D world crunchy on purpose while keeping the interface readable, which seemed like a decent first step toward the PlayStation look I wanted.
+The 3D render resolution is now a separate setting from the interface. Lowering it makes the world render in larger pixels while the interface remains readable.
 
-Turning the resolution down doesn't magically make a game look like an old PlayStation game. It just makes the pixels bigger. I kept poking at snapping, dithering, fog, and the character models after this, because apparently I enjoy finding four new ways for one setting to look weird.
+Lower resolution alone does not recreate an old PlayStation look; it makes the pixels larger. Later experiments also compare snapping, dithering, fog, and character models.
