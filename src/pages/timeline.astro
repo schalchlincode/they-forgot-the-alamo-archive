@@ -1,0 +1,5 @@
+---
+import Base from '../layouts/Base.astro';
+import { entries } from '../data/entries';
+---
+<Base title="Timeline"><header class="page-head"><p class="eyebrow">From the earliest surviving commit</p><h1>Timeline</h1><p class="lead">A short, dense beginning. The record starts on September 29, 2026; earlier idea work may have existed, but a dated source has not been established.</p></header><div class="timeline">{entries.map(e=><article class:list={{major:e.milestone}}><span class="date">{e.date}{e.milestone && ' / Milestone'}</span><h3><a href={'/devlog/'+e.slug+'/'}>{e.title} ↗</a></h3><p>{e.summary}</p></article>)}</div></Base>

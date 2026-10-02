@@ -1,0 +1,86 @@
+[
+  {
+    "web": "/media/first-commit-room.webp",
+    "original": "captures/historical/2026-09-29-first-surviving-room.png",
+    "note": "Reconstructed from commit bf4a988 in isolated Edge browser capture, 2026-10-01",
+    "entry": "first-room"
+  },
+  {
+    "web": "/media/pre-pixel-room.webp",
+    "original": "captures/historical/2026-09-30-pre-pixel-room.png",
+    "note": "Reconstructed from commit 14c3825 in isolated Edge browser capture, 2026-10-01",
+    "entry": "camera-finds-davy"
+  },
+  {
+    "web": "/media/early-room.webp",
+    "original": "b0-before-20261001/gameplay-rear.png",
+    "note": "Baseline capture made 2026-10-01 of the earlier procedural character state",
+    "entry": "first-room"
+  },
+  {
+    "web": "/media/pixel-grid-on.webp",
+    "original": "b2-lowres-on.png",
+    "note": "Experimental capture made 2026-10-01",
+    "entry": "pixel-grid"
+  },
+  {
+    "web": "/media/pixel-grid-off.webp",
+    "original": "b2-lowres-off.png",
+    "note": "Experimental capture made 2026-10-01",
+    "entry": "pixel-grid"
+  },
+  {
+    "web": "/media/dither-on.webp",
+    "original": "b2-dither-tuned-on-20261001.png",
+    "note": "Experimental capture made 2026-10-01",
+    "entry": "graphics-laboratory"
+  },
+  {
+    "web": "/media/vertex-snap-on.webp",
+    "original": "b2-vertex-snap-on-20261001.png",
+    "note": "Experimental capture made 2026-10-01",
+    "entry": "graphics-laboratory"
+  },
+  {
+    "web": "/media/davy-b3.webp",
+    "original": "art/renders/davy-b3/three-quarter.png",
+    "note": "Model review render recorded 2026-10-01",
+    "entry": "davy-gets-a-face"
+  },
+  {
+    "web": "/media/davy-b4.webp",
+    "original": "art/renders/davy-b4/contact-sheet.png",
+    "note": "Model review contact sheet recorded 2026-10-01",
+    "entry": "davy-learns-to-move"
+  },
+  {
+    "web": "/media/raccoon-room.webp",
+    "original": "regression-screenshots/b4-05-raccoon-view.png",
+    "note": "Regression capture from 2026-10-01, before later integration fixes",
+    "entry": "raccoon-gets-bones"
+  },
+  {
+    "web": "/media/current-room.webp",
+    "original": "captures/2026-10-01-current-room.png",
+    "note": "Fresh browser capture of the current game on 2026-10-01; not a screenshot from the older commit",
+    "entry": "making-the-models-work"
+  },
+  {
+    "web": "/media/shotgun-model.webp",
+    "original": "shotgun-review.png",
+    "note": "Game browser review capture made 2026-10-02 after the Blender shotgun integration",
+    "entry": "blender-shotgun"
+  },
+  {
+    "web": "/media/shotgun-open.webp",
+    "original": "shotgun-open-review.png",
+    "note": "Game browser review capture made 2026-10-02 of the break-open reload",
+    "entry": "blender-shotgun"
+  },
+  {
+    "web": "/media/two-hand-carry.webp",
+    "original": "tmp-two-hand.png",
+    "note": "Game browser capture made 2026-10-02 during the two-arm carry review",
+    "entry": "two-hand-carry"
+  }
+]

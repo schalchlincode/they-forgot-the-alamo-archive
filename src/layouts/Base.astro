@@ -1,0 +1,21 @@
+---
+import '../styles.css';
+const { title = 'They Forgot the Alamo', description = 'A living archive of a strange PS1-flavored game in progress.' } = Astro.props;
+const nav = [['/', 'Home'], ['/devlog/', 'Dev Log'], ['/timeline/', 'Timeline'], ['/gallery/', 'Gallery'], ['/about/', 'About'], ['/play/', 'Play']];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title} — They Forgot the Alamo</title>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header"><a class="brand" href="/">TF<span class="star">✦</span>TA <small>THE DEVELOPMENT ARCHIVE</small></a><nav aria-label="Main navigation">{nav.map(([url,label]) => <a href={url} aria-current={Astro.url.pathname === url ? 'page' : undefined}>{label}</a>)}</nav></header>
+    <main id="main"><slot /></main>
+    <footer><span>THEY FORGOT THE ALAMO / A GAME IN PROGRESS</span><span>Every strange intermediate version counts.</span></footer>
+  </body>
+</html>

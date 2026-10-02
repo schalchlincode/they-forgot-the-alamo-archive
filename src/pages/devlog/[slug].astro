@@ -1,0 +1,7 @@
+---
+import Base from '../../layouts/Base.astro';
+import { entries } from '../../data/entries';
+export function getStaticPaths(){return entries.map(entry=>({params:{slug:entry.slug},props:{entry}}));}
+const {entry}=Astro.props;
+---
+<Base title={entry.title} description={entry.summary}><article class="post"><header class="page-head"><p class="eyebrow"><a href="/devlog/">← Dev Log</a> / {entry.milestone ? 'Milestone' : 'Development entry'}</p><h1>{entry.title}</h1><p class="date">{entry.date} · {entry.tags.join(' / ')}</p><p class="lead">{entry.summary}</p></header>{entry.image && <img class="hero-image" src={entry.image} alt={entry.imageAlt} />}<div class="body">{entry.body.map(p=><p>{p}</p>)}</div><aside class="source"><strong>Archive source</strong><br />{entry.sourceType === 'commit' ? 'Git commit(s): ' : 'Project record: '}{entry.source}<br />Date is based on local Git history or a dated project record. Later captures used to illustrate older work are labeled in the gallery.</aside><h2>Keep exploring</h2><div class="grid">{entries.filter(e=>e.slug!==entry.slug && e.tags.some(t=>entry.tags.includes(t))).slice(0,2).map(e=><a class="card" href={'/devlog/'+e.slug+'/'}><div class="card-content"><span class="date">{e.date}</span><h3>{e.title}</h3></div></a>)}</div></article></Base>

@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import { entries } from '../data/entries';
+const images = [
+  {src:'/media/first-commit-room.webp',title:'First surviving room',slug:'first-room',kind:'Reconstructed from September 29 commit'},
+  {src:'/media/pre-pixel-room.webp',title:'Camera behind Davy',slug:'camera-finds-davy',kind:'Reconstructed from September 30 commit'},
+  {src:'/media/early-room.webp',title:'Before the character rebuild',slug:'first-room',kind:'Later baseline capture'},
+  {src:'/media/pixel-grid-on.webp',title:'Low resolution on',slug:'pixel-grid',kind:'Experimental capture'},
+  {src:'/media/pixel-grid-off.webp',title:'Low resolution off',slug:'pixel-grid',kind:'Experimental capture'},
+  {src:'/media/dither-on.webp',title:'Dither on',slug:'graphics-laboratory',kind:'Experimental capture'},
+  {src:'/media/vertex-snap-on.webp',title:'Vertex snap on',slug:'graphics-laboratory',kind:'Experimental capture'},
+  {src:'/media/davy-b3.webp',title:'Davy B3',slug:'davy-gets-a-face',kind:'Model review render'},
+  {src:'/media/davy-b4.webp',title:'Davy B4 poses',slug:'davy-learns-to-move',kind:'Model review render'},
+  {src:'/media/raccoon-room.webp',title:'Raccoon view',slug:'raccoon-gets-bones',kind:'Gameplay regression capture'},
+  {src:'/media/current-room.webp',title:'October 1 room prototype',slug:'making-the-models-work',kind:'Gameplay regression capture'},
+  {src:'/media/shotgun-model.webp',title:'Blender shotgun in the room',slug:'blender-shotgun',kind:'October 2 browser review'},
+  {src:'/media/shotgun-open.webp',title:'Break-open reload',slug:'blender-shotgun',kind:'October 2 browser review'},
+  {src:'/media/two-hand-carry.webp',title:'Two-arm carry',slug:'two-hand-carry',kind:'October 2 browser review'}
+];
+---
+<Base title="Gallery"><header class="page-head"><p class="eyebrow">Visual evidence, including the rough bits</p><h1>Gallery</h1><p class="lead">Captures and model renders linked back to their development stories. An illustration of an older entry may have been captured later; captions say when that matters.</p></header><div class="grid gallery">{images.map(item=><a class="card" href={'/devlog/'+item.slug+'/'}><img src={item.src} alt={item.title} loading="lazy" /><div class="card-content"><span class="date">{item.kind}</span><h3>{item.title}</h3></div></a>)}</div></Base>
