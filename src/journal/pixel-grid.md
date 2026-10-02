@@ -1,8 +1,8 @@
 ---
 slug: "pixel-grid"
 date: "2026-09-30"
-title: "The room goes through a pixel grid"
-summary: "Render resolution became a deliberate setting instead of a side effect of the browser window."
+title: "I started treating the pixels as part of the look"
+summary: "I made the render resolution an actual setting so the pixel look wasn't at the mercy of the browser window."
 tags: ["Graphics", "Experiment"]
 milestone: true
 image: "/media/pixel-grid-on.webp"
@@ -12,6 +12,6 @@ sourceType: "commit"
 order: 3
 ---
 
-A central settings file made the internal render grid explicit. That matters for the game’s PlayStation-era look: the world can become crunchy while the interface remains legible.
+I pulled the render resolution into its own setting. That let me make the 3D world crunchy on purpose while keeping the interface readable, which seemed like a decent first step toward the PlayStation look I wanted.
 
-A low-resolution image can suggest an older machine, but it does not create a complete visual identity on its own. Vertex snapping, dithering, fog, and character silhouettes would keep changing after this point.
+Turning the resolution down doesn't magically make a game look like an old PlayStation game. It just makes the pixels bigger. I kept poking at snapping, dithering, fog, and the character models after this, because apparently I enjoy finding four new ways for one setting to look weird.

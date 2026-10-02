@@ -1,8 +1,8 @@
 ---
 slug: "first-room"
 date: "2026-09-29"
-title: "A room, a shotgun, and an unreasonable premise"
-summary: "The first surviving game commit is a small browser room prototype with Davy, targets, and a shotgun."
+title: "I started with a room, a shotgun, and a ridiculous idea"
+summary: "The earliest build I can still point to has Davy, a few targets, and the basic shape of the game."
 tags: ["Gameplay", "Environment", "Weapons"]
 milestone: true
 image: "/media/first-commit-room.webp"
@@ -12,6 +12,6 @@ sourceType: "commit"
 order: 0
 ---
 
-The first surviving source snapshot already knows what kind of game this wants to be: a compact 3D room where Davy Crockett can move, aim, and shoot. The larger story is stranger: David Crockett survives a crash, wakes from a coma believing he is Davy Crockett, and goes on a rampage.
+This is the earliest version I still have in the repo: a little 3D room, Davy Crockett, some targets, and a shotgun. The story idea is already gloriously wrong: David Crockett survives a crash, wakes from a coma convinced he *is* Davy Crockett, and goes on a rampage. I wanted to see if that could work as a game before I worried about making it pretty.
 
-This is the earliest version preserved in the repository, not proof that it was the first hour of development. Its art is assembled from simple shapes. That rough construction is part of the record.
+This isn't necessarily where I first started working on it; it's just the oldest version I can verify. Most of the art is boxes and other simple shapes. That's fine. You have to start somewhere, and honestly, the rough version has its own charm.

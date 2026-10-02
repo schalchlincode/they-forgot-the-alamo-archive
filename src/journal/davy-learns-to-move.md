@@ -1,8 +1,8 @@
 ---
 slug: "davy-learns-to-move"
 date: "2026-10-01"
-title: "Davy learns to move, then argues with his shotgun"
-summary: "A skinned rig, animation clips, and a gun socket brought new possibilities and new alignment problems."
+title: "I taught Davy to move. Then the shotgun got involved."
+summary: "The new rig and animation clips opened things up, and immediately gave me a fresh crop of alignment problems."
 tags: ["Animation", "Davy", "Weapons"]
 milestone: true
 image: "/media/davy-b4.webp"
@@ -12,6 +12,6 @@ sourceType: "commit"
 order: 8
 ---
 
-The B4 rig introduced named animation clips and a socket to place the shotgun in Davy’s hand. The next commits read like a pose review: repair the stride, probe the vertical aim range, measure the support grip, and keep the barrel pointing where a shot will go.
+The B4 rig gave Davy named animation clips and a spot for the shotgun to attach to his hand. Then came a parade of little fixes: sort out the walk, see how far he can aim up, get the left hand onto the gun, and try to keep the barrel pointed where the shot goes. Seemed simple. It was not.
 
-The work is a reminder that a convincing character is a chain of agreements between mesh, bones, weapon, camera, and controls. One bad handshake and Davy appears to be negotiating with the gun.
+Turns out the character, his bones, the gun, the camera, and the controls all have to cooperate. One of them gets out of line and Davy looks like he's negotiating a peace treaty with the shotgun.

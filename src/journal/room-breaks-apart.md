@@ -1,8 +1,8 @@
 ---
 slug: "room-breaks-apart"
 date: "2026-09-30"
-title: "The room stops being scenery"
-summary: "By September 30, targets and crates shattered, wall tiles left holes, and fragments could be shot again."
+title: "I made the room break when you shoot it"
+summary: "Targets and crates started coming apart, wall tiles left holes, and the flying bits could be shot too."
 tags: ["Destruction", "Gameplay", "Environment"]
 milestone: true
 source: "14c382556c0288670c9f73d460bb3492e8d5dcc0: README.md and main.js"
@@ -10,8 +10,8 @@ sourceType: "commit"
 order: 4
 ---
 
-A shooting room needs something to complain when it gets hit. The September 30 README describes breakable targets and crates, removable wall tiles, and fragments that bounce and can be broken again. The environment had become part of the action.
+I wanted the room to react when you fired, so targets and crates started breaking apart and wall tiles could disappear. Even the flying chunks could be shot again. It's a lot more fun than putting bullet holes on a wall and calling it a day.
 
-There is a useful cheat underneath it: this is lightweight game physics, not a structural simulation. Fragments do not collide with one another, loose debris does not block walking, and the player still meets a solid room boundary even where a wall tile has gone missing. The floor and trim stay fixed. Those compromises keep the experiment focused on movement and satisfying damage.
+There's some deliberately fake physics under all that. Debris doesn't bump into other debris or get underfoot, and you can't walk out through a hole in the wall. The floor and trim stay put too. I was after satisfying things-to-shoot, not a serious structural engineering degree for every brick.
 
-This date means the system is documented by this snapshot. It is not a claim that every part was first implemented that day. No separately verified destruction screenshot is attached to this entry.
+The old README tells me this was in by September 30; it doesn't prove that's the day I first wrote it. I don't have a clean, verified destruction shot for this entry yet, so I'm leaving the gallery out of it for now.

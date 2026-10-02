@@ -1,8 +1,8 @@
 ---
 slug: "camera-finds-davy"
 date: "2026-09-30"
-title: "The camera moves in behind Davy"
-summary: "A later surviving build shows the room closer to the character, with mouse lock, aiming, and the Q raccoon view in its controls."
+title: "I moved the camera in behind Davy"
+summary: "By this saved build, you could get closer to Davy, aim with the mouse, and swap to the raccoon's view with Q."
 tags: ["Gameplay", "Camera", "Raccoon"]
 milestone: false
 image: "/media/pre-pixel-room.webp"
@@ -12,6 +12,6 @@ sourceType: "commit"
 order: 2
 ---
 
-The first surviving snapshot kept its distance from a tiny Davy in the middle of the room. By the September 30 snapshot, the camera sat behind him, close enough to see the hat, shotgun, target stands, and the room built around them.
+In the first saved version, Davy was a little guy way off in the room. In this one, I had moved the camera in behind him. You can actually make out the hat and shotgun, and the room starts to feel like somewhere you're standing instead of a diagram you're looking at.
 
-This image was reconstructed by launching that exact Git version in an isolated browser session on October 1. It is evidence of the older build, not a screenshot taken during the original work. The commit establishes the state by this date; it does not identify the exact moment each control first appeared.
+I relaunched that exact old version in a separate browser on October 1 to get this image. So it's a reconstruction, not a screenshot I happened to take while building it. The saved code tells me this setup existed by September 30; it doesn't tell me the exact afternoon I added each control.

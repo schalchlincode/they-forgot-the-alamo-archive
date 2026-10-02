@@ -1,8 +1,8 @@
 ---
 slug: "blender-shotgun"
 date: "2026-10-02"
-title: "A shotgun with a real hinge"
-summary: "An original Blender model replaced the blockier game prop, with separate hinged barrels for the visible reload."
+title: "I built the shotgun around a real hinge"
+summary: "I made a low-poly side-by-side shotgun in Blender, with barrels that actually swing open for the reload."
 tags: ["Weapons", "Animation", "Models"]
 milestone: true
 image: "/media/shotgun-open.webp"
@@ -12,6 +12,6 @@ sourceType: "record"
 order: 11
 ---
 
-The shotgun was rebuilt as an original low-poly side-by-side model in Blender. Its barrel assembly is separate from the receiver, so the break-open reload can visibly expose the chambers. The existing two-shell firing and reload sequence drives that moving piece in the game.
+I rebuilt the shotgun as an original low-poly side-by-side model in Blender. The barrels are a separate piece from the receiver, which means the game can swing them open and show the chambers during the reload. The existing two-shell setup now has something physical to do while all that happens.
 
-The model loads as a GLB. The procedural weapon remains as a fallback if loading fails. An October 2 Edge interaction test recorded model loading, firing, the open breech, and a completed reload. The image is a review capture from that day, not a render of an earlier version.
+The game loads the model as a GLB, with the old procedural gun still there as a fallback in case the file doesn't load. I checked it in Edge: the model loaded, it fired, the breech opened, and the reload finished. The image is from that October 2 check, not a reconstruction of an older build.

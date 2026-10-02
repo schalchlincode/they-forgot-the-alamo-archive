@@ -1,8 +1,8 @@
 ---
 slug: "davy-gets-a-face"
 date: "2026-10-01"
-title: "Davy gets a face worth recognizing"
-summary: "The procedural figure gave way to a modeled, textured low-poly Davy candidate."
+title: "I tried giving Davy an actual face"
+summary: "I started replacing the placeholder shapes with a low-poly Davy model, face and all."
 tags: ["Characters", "Davy", "Graphics"]
 milestone: true
 image: "/media/davy-b3.webp"
@@ -12,6 +12,6 @@ sourceType: "commit"
 order: 7
 ---
 
-The early Davy was made from cylinders, boxes, and other primitives in the main game file. A new model candidate gave the character a more intentional human silhouette, face, hair, and clothing.
+My first Davy was a pile of cylinders and boxes. I started swapping that out for a proper low-poly model with a face, hair, clothes, and something closer to a human silhouette.
 
-The B3 work includes close renders and a game-scale view. A model can look excellent in a renderer and disappear into a handful of pixels in play, so both views belong in the record.
+I saved both close-up renders and a view at actual game size. A model can look great when it's filling the screen and turn into three dark pixels once you put it in the room. I learned that one the practical way.

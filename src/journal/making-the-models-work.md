@@ -1,8 +1,8 @@
 ---
 slug: "making-the-models-work"
 date: "2026-10-01"
-title: "The models finally agree to load"
-summary: "Loader, skinning, gun attachment, and Q transition fixes followed the ambitious character swap."
+title: "I got the new models working in the actual game"
+summary: "Getting Davy and the raccoon into the project was only half the job; then I had to make them behave."
 tags: ["Gameplay", "Animation", "Bug"]
 milestone: false
 image: "/media/current-room.webp"
@@ -12,6 +12,6 @@ sourceType: "commit"
 order: 10
 ---
 
-A new asset is only useful when it survives the actual game. The later October 1 commits fix the official Three.js loader path, skinned Davy and raccoon, the gun in Davy’s hand, and the Q toggle. Another pass has Davy carry the shotgun raised using aim clips.
+Making a model is one thing. Getting it to load, animate, hold a shotgun, and switch views without breaking the game is the less glamorous half. I fixed the Three.js loader, got the skinned Davy and raccoon into the room, sorted out the Q toggle, and worked on the gun attachment. One pass also has Davy carrying the shotgun up with his aim animations.
 
-The working room is still a prototype. It has movement, firing, reload, destruction, and the raccoon transition; it does not yet have a campaign or enemies.
+It's still a prototype room. You can move, shoot, reload, break things, and turn into a raccoon, but there isn't a campaign or anything trying to shoot back yet. One room at a time.

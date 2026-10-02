@@ -1,6 +1,6 @@
 ---
 import '../styles.css';
-const { title = 'They Forgot the Alamo', description = 'A living archive of a strange PS1-flavored game in progress.' } = Astro.props;
+const { title = 'They Forgot the Alamo', description = 'I’m making a strange little PS1-flavored game. Here’s how it’s going.' } = Astro.props;
 const nav = [['/', 'Home'], ['/devlog/', 'Dev Log'], ['/timeline/', 'Timeline'], ['/gallery/', 'Gallery'], ['/about/', 'About'], ['/play/', 'Play']];
 ---
 <!doctype html>
@@ -14,8 +14,8 @@ const nav = [['/', 'Home'], ['/devlog/', 'Dev Log'], ['/timeline/', 'Timeline'],
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
-    <header class="site-header"><a class="brand" href="/">TF<span class="star">✦</span>TA <small>THE DEVELOPMENT ARCHIVE</small></a><nav aria-label="Main navigation">{nav.map(([url,label]) => <a href={url} aria-current={Astro.url.pathname === url ? 'page' : undefined}>{label}</a>)}</nav></header>
+    <header class="site-header"><a class="brand" href="/">TF<span class="star">✦</span>TA <small>MAKING A GAME, SLOWLY</small></a><nav aria-label="Main navigation">{nav.map(([url,label]) => <a href={url} aria-current={Astro.url.pathname === url ? 'page' : undefined}>{label}</a>)}</nav></header>
     <main id="main"><slot /></main>
-    <footer><span>THEY FORGOT THE ALAMO / A GAME IN PROGRESS</span><span>Every strange intermediate version counts.</span></footer>
+    <footer><span>THEY FORGOT THE ALAMO / STILL A WORK IN PROGRESS</span><span>I'm keeping the weird versions too.</span></footer>
   </body>
 </html>

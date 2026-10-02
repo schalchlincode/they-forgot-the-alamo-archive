@@ -1,8 +1,8 @@
 ---
 slug: "raccoon-gets-bones"
 date: "2026-10-01"
-title: "The raccoon gets bones"
-summary: "The earlier procedural raccoon remained as a fallback while a skinned model and animation clips arrived."
+title: "I gave the raccoon a skeleton"
+summary: "The raccoon started as procedural shapes; I swapped in an animated model and kept the old version as a fallback."
 tags: ["Raccoon", "Animation", "Characters"]
 milestone: true
 image: "/media/raccoon-room.webp"
@@ -12,6 +12,6 @@ sourceType: "commit"
 order: 9
 ---
 
-The Q key already turned Davy’s cap into a roaming raccoon viewpoint. The first version used simple procedural geometry and timed movement. The October 1 model work added a skinned low-poly raccoon with twelve clips.
+Pressing Q already let you leave Davy behind and wander around as a raccoon. The first one was made from simple shapes with a bit of timed movement. I replaced it with a low-poly model and twelve animation clips. Twelve! The raccoon has a better performance contract than I do.
 
-The older form remains historically useful: it shows how an odd mechanic can exist before its final character art. The new GLB was wired into the game with Davy’s socket and the Q transition.
+I kept the old version around as a fallback and because it's fun to see how the idea started. The new model is loaded from a GLB and hooked into Davy's view swap. Weird little mechanics are allowed to get nicer costumes too.
